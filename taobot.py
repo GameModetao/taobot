@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -31,7 +32,7 @@ async def on_message(message):
 
     if message.contact.startswith("/타오봇 명령어"):
         await message.contact.send("/타오봇 [안녕,뭐해,심심해,밥뭐먹을까,이벤트,설명,명령어]")
+        
 
-
-
-client.run("NjAyMzM5NjE2Njk0OTkyOTA3.XTPavA.Fgy7qOcij_nGAq9Txal3U4GpbQo")
+access_token = os environ["BOT_TOKEN"]
+client.run(access_token)
